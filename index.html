@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>.: MuniGeo :.</title>
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" href="style.css" media="screen">
+    <!--[if lte IE 7]><link rel="stylesheet" href="style.ie7.css" media="screen" /><![endif]-->
+    <link rel="stylesheet" href="style.responsive.css" media="all">
+
+
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
+    <script src="script.responsive.js"></script>
+<meta name="description" content="Description">
+<meta name="keywords" content="Keywords">
+
+
+<script>jQuery(function($) {
+    'use strict';
+    if ($.fn.slider) {
+        $(".art-slidecontainerefd96ba26a684c9c811d38008cf29c30").each(function () {
+            var slideContainer = $(this), tmp;
+            var inner = $(".art-slider-inner", slideContainer);
+            var helper = null;
+
+            if ($.support.transition) {
+                helper = new BackgroundHelper();
+                helper.init("horizontal", "next", $(".art-slide-item", inner).first().css($.support.transition.prefix + "transition-duration"));
+                inner.children().each(function () {
+                    helper.processSlide($(this), true);
+                });
+
+                var items = helper.items(helper.current(0), helper.next(0));
+                helper.setBackground(inner, items);
+                helper.setPosition(inner, items);
+
+                slideContainer.on("beforeSlide", function () {
+                    var activeItem = $(".active", this),
+                        nextItem = $(".next, .prev", this),
+                        activePos = $(".art-slide-item", this).index(activeItem),
+                        nextPos = $(".art-slide-item", this).index(nextItem);
+
+                    var currentItems = helper.items(helper.current(activePos), helper.current(nextPos));
+
+                    helper.transition(inner, false);
+                    helper.setBackground(inner, currentItems);
+                    helper.setPosition(inner, currentItems);
+                    if (inner.length) {
+                        tmp = inner.get(0).offsetHeight;
+                    }
+
+                    var movedCurrentItems = helper.items(helper.current(activePos), helper.current(nextPos), true);
+                    helper.transition(inner, true);
+                    helper.setPosition(inner, movedCurrentItems);
+                });
+            }
+
+
+            inner.children().eq(0).addClass("active");
+            slideContainer.slider({
+                pause: 2600,
+                speed: 600,
+                repeat: true,
+                animation: "horizontal",
+                direction: "next",
+                navigator: slideContainer.siblings(".art-slidenavigatorefd96ba26a684c9c811d38008cf29c30"),
+                helper: helper                
+            });
+        });
+    }
+});
+jQuery(function($) {
+    'use strict';
+    if ($.fn.slider) {
+        $(".art-slidecontainermaquina1").each(function () {
+            var slideContainer = $(this), tmp;
+            var inner = $(".art-slider-inner", slideContainer);
+            var helper = null;
+
+            if ($.support.transition) {
+                helper = new BackgroundHelper();
+                helper.init("fade", "next", $(".art-slide-item", inner).first().css($.support.transition.prefix + "transition-duration"));
+                inner.children().each(function () {
+                    helper.processSlide($(this));
+                });
+
+            }
+
+
+            inner.children().eq(0).addClass("active");
+            slideContainer.slider({
+                pause: 2600,
+                speed: 600,
+                repeat: true,
+                animation: "fade",
+                direction: "next",
+                navigator: slideContainer.siblings(".art-slidenavigatormaquina1"),
+                helper: helper                
+            });
+        });
+    }
+});
+jQuery(function($) {
+    'use strict';
+    if ($.fn.slider) {
+        $(".art-slidecontainertaxi3").each(function () {
+            var slideContainer = $(this), tmp;
+            var inner = $(".art-slider-inner", slideContainer);
+            var helper = null;
+
+            if ($.support.transition) {
+                helper = new BackgroundHelper();
+                helper.init("fade", "next", $(".art-slide-item", inner).first().css($.support.transition.prefix + "transition-duration"));
+                inner.children().each(function () {
+                    helper.processSlide($(this));
+                });
+
+            }
+
+
+            inner.children().eq(0).addClass("active");
+            slideContainer.slider({
+                pause: 2600,
+                speed: 600,
+                repeat: true,
+                animation: "fade",
+                direction: "next",
+                navigator: slideContainer.siblings(".art-slidenavigatortaxi3"),
+                helper: helper                
+            });
+        });
+    }
+});
+</script><style>.art-content .art-postcontent-0 .layout-item-0 { padding-right: 0px;  }
+.art-content .art-postcontent-0 .layout-item-1 { padding-top: 10px;padding-left: 5px;  }
+.art-content .art-postcontent-0 .layout-item-2 { border-right-style:Solid;border-bottom-style:Solid;border-right-width:0px;border-bottom-width:0px;border-right-color:#979782;border-bottom-color:#979782; padding-right: 20px;padding-left: 10px;  }
+.art-content .art-postcontent-0 .layout-item-3 { padding-right: 20px;padding-left: 20px;  }
+.ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+.ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+
+.art-slidecontainerefd96ba26a684c9c811d38008cf29c30 {
+    position: relative;
+        width: 700px;
+    height: 457px;
+        }
+
+.art-slidecontainerefd96ba26a684c9c811d38008cf29c30 .art-slide-item
+{
+
+}
+
+.art-slidecontainerefd96ba26a684c9c811d38008cf29c30 .art-slide-item {
+    -webkit-transition: 600ms ease-in-out left;
+    -moz-transition: 600ms ease-in-out left;
+    -ms-transition: 600ms ease-in-out left;
+    -o-transition: 600ms ease-in-out left;
+    transition: 600ms ease-in-out left;
+    position: relative;
+    display: none;
+    width:  100%;
+    height: 100%;
+}
+
+.art-slidecontainerefd96ba26a684c9c811d38008cf29c30 .active, .art-slidecontainerefd96ba26a684c9c811d38008cf29c30 .next, .art-slidecontainerefd96ba26a684c9c811d38008cf29c30 .prev {
+    display: block;
+}
+
+.art-slidecontainerefd96ba26a684c9c811d38008cf29c30 .active {
+    left: 0;
+}
+
+.art-slidecontainerefd96ba26a684c9c811d38008cf29c30 .next, .art-slidecontainerefd96ba26a684c9c811d38008cf29c30 .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.art-slidecontainerefd96ba26a684c9c811d38008cf29c30 .next {
+    left: 100%;
+}
+
+.art-slidecontainerefd96ba26a684c9c811d38008cf29c30 .prev {
+    left: -100%;
+}
+
+.art-slidecontainerefd96ba26a684c9c811d38008cf29c30 .next.forward, .art-slidecontainerefd96ba26a684c9c811d38008cf29c30 .prev.back {
+    left: 0;
+}
+
+.art-slidecontainerefd96ba26a684c9c811d38008cf29c30 .active.forward {
+    left: -100%;
+}
+
+.art-slidecontainerefd96ba26a684c9c811d38008cf29c30 .active.back {
+    left: 100%;
+}
+
+
+
+
+.art-slideefd96ba26a684c9c811d38008cf29c300 {
+    background-image:  url('images/slideefd96ba26a684c9c811d38008cf29c300.jpg');
+        background-size:  100%;
+        background-position:  0 0;
+    background-repeat: no-repeat;
+}
+.art-slideefd96ba26a684c9c811d38008cf29c301 {
+    background-image:  url('images/slideefd96ba26a684c9c811d38008cf29c301.jpg');
+        background-size:  100%;
+        background-position:  0 0;
+    background-repeat: no-repeat;
+}
+
+
+.art-slidenavigatorefd96ba26a684c9c811d38008cf29c30 {
+  display: inline-block;
+  position: absolute;
+  direction: ltr !important;
+  top: 433px;
+  left: 93.71%;
+  z-index: 101;
+  line-height: 0 !important;
+  -webkit-background-origin: border !important;
+  -moz-background-origin: border !important;
+  background-origin: border-box !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+    white-space: nowrap;
+    }
+.art-slidenavigatorefd96ba26a684c9c811d38008cf29c30
+{
+background: #C0C0B4;background: linear-gradient(top, rgba(229, 229, 224, 0.6) 0, rgba(155, 155, 135, 0.6) 100%) no-repeat;background: -webkit-linear-gradient(top, rgba(229, 229, 224, 0.6) 0, rgba(155, 155, 135, 0.6) 100%) no-repeat;background: -moz-linear-gradient(top, rgba(229, 229, 224, 0.6) 0, rgba(155, 155, 135, 0.6) 100%) no-repeat;background: -o-linear-gradient(top, rgba(229, 229, 224, 0.6) 0, rgba(155, 155, 135, 0.6) 100%) no-repeat;background: -ms-linear-gradient(top, rgba(229, 229, 224, 0.6) 0, rgba(155, 155, 135, 0.6) 100%) no-repeat;background: linear-gradient(top, rgba(229, 229, 224, 0.6) 0, rgba(155, 155, 135, 0.6) 100%) no-repeat;-svg-background: linear-gradient(top, rgba(229, 229, 224, 0.6) 0, rgba(155, 155, 135, 0.6) 100%) no-repeat;
+-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
+
+
+padding:7px;
+
+
+
+
+
+}
+.art-slidenavigatorefd96ba26a684c9c811d38008cf29c30 > a
+{
+background: #7D7D68;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+.art-slidenavigatorefd96ba26a684c9c811d38008cf29c30 > a.active
+{
+background: #9DC7E2;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+.art-slidenavigatorefd96ba26a684c9c811d38008cf29c30 > a:hover
+{
+background: #3076A1;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+
+.art-slidecontainermaquina1 {
+    position: relative;
+        width: 350px;
+    height: 233px;
+        }
+
+.art-slidecontainermaquina1 .art-slide-item
+{
+
+}
+
+
+
+.art-slidecontainermaquina1 .art-slide-item {
+    -webkit-transition: 600ms ease-in-out opacity;
+    -moz-transition: 600ms ease-in-out opacity;
+    -ms-transition: 600ms ease-in-out opacity;
+    -o-transition: 600ms ease-in-out opacity;
+    transition: 600ms ease-in-out opacity;
+    position: absolute;
+    display: none;
+	left: 0;
+	top: 0;
+	opacity: 0;
+    width:  100%;
+    height: 100%;
+}
+
+.art-slidecontainermaquina1 .active, .art-slidecontainermaquina1 .next, .art-slidecontainermaquina1 .prev {
+    display: block;
+}
+
+.art-slidecontainermaquina1 .active {
+    opacity: 1;
+}
+
+.art-slidecontainermaquina1 .next, .art-slidecontainermaquina1 .prev {
+    width: 100%;
+}
+
+.art-slidecontainermaquina1 .next.forward, .art-slidecontainermaquina1 .prev.back {
+    opacity: 1;
+}
+
+.art-slidecontainermaquina1 .active.forward {
+    opacity: 0;
+}
+
+.art-slidecontainermaquina1 .active.back {
+    opacity: 0;
+}
+
+
+.art-slidemaquina10 {
+    background-image:  url('images/slidemaquina10.jpg');
+        background-size:  100%;
+        background-position:  0 0;
+    background-repeat: no-repeat;
+}
+.art-slidemaquina11 {
+    background-image:  url('images/slidemaquina11.jpg');
+        background-size:  100%;
+        background-position:  0 0;
+    background-repeat: no-repeat;
+}
+.art-slidemaquina12 {
+    background-image:  url('images/slidemaquina12.jpg');
+        background-size:  100%;
+        background-position:  0 0;
+    background-repeat: no-repeat;
+}
+.art-slidemaquina13 {
+    background-image:  url('images/slidemaquina13.jpg');
+        background-size:  100%;
+        background-position:  0 0;
+    background-repeat: no-repeat;
+}
+
+
+.art-slidenavigatormaquina1 {
+  display: inline-block;
+  position: absolute;
+  direction: ltr !important;
+  top: 209px;
+  left: 76%;
+  z-index: 101;
+  line-height: 0 !important;
+  -webkit-background-origin: border !important;
+  -moz-background-origin: border !important;
+  background-origin: border-box !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+    white-space: nowrap;
+    }
+.art-slidenavigatormaquina1
+{
+background: #C0C0B4;background: linear-gradient(top, rgba(229, 229, 224, 0.6) 0, rgba(155, 155, 135, 0.6) 100%) no-repeat;background: -webkit-linear-gradient(top, rgba(229, 229, 224, 0.6) 0, rgba(155, 155, 135, 0.6) 100%) no-repeat;background: -moz-linear-gradient(top, rgba(229, 229, 224, 0.6) 0, rgba(155, 155, 135, 0.6) 100%) no-repeat;background: -o-linear-gradient(top, rgba(229, 229, 224, 0.6) 0, rgba(155, 155, 135, 0.6) 100%) no-repeat;background: -ms-linear-gradient(top, rgba(229, 229, 224, 0.6) 0, rgba(155, 155, 135, 0.6) 100%) no-repeat;background: linear-gradient(top, rgba(229, 229, 224, 0.6) 0, rgba(155, 155, 135, 0.6) 100%) no-repeat;-svg-background: linear-gradient(top, rgba(229, 229, 224, 0.6) 0, rgba(155, 155, 135, 0.6) 100%) no-repeat;
+-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
+
+
+padding:7px;
+
+
+
+
+
+}
+.art-slidenavigatormaquina1 > a
+{
+background: #7D7D68;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+.art-slidenavigatormaquina1 > a.active
+{
+background: #9DC7E2;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+.art-slidenavigatormaquina1 > a:hover
+{
+background: #3076A1;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+
+.art-slidecontainertaxi3 {
+    position: relative;
+        width: 300px;
+    height: 300px;
+        }
+
+.art-slidecontainertaxi3 .art-slide-item
+{
+
+}
+
+
+
+.art-slidecontainertaxi3 .art-slide-item {
+    -webkit-transition: 600ms ease-in-out opacity;
+    -moz-transition: 600ms ease-in-out opacity;
+    -ms-transition: 600ms ease-in-out opacity;
+    -o-transition: 600ms ease-in-out opacity;
+    transition: 600ms ease-in-out opacity;
+    position: absolute;
+    display: none;
+	left: 0;
+	top: 0;
+	opacity: 0;
+    width:  100%;
+    height: 100%;
+}
+
+.art-slidecontainertaxi3 .active, .art-slidecontainertaxi3 .next, .art-slidecontainertaxi3 .prev {
+    display: block;
+}
+
+.art-slidecontainertaxi3 .active {
+    opacity: 1;
+}
+
+.art-slidecontainertaxi3 .next, .art-slidecontainertaxi3 .prev {
+    width: 100%;
+}
+
+.art-slidecontainertaxi3 .next.forward, .art-slidecontainertaxi3 .prev.back {
+    opacity: 1;
+}
+
+.art-slidecontainertaxi3 .active.forward {
+    opacity: 0;
+}
+
+.art-slidecontainertaxi3 .active.back {
+    opacity: 0;
+}
+
+
+.art-slidetaxi30 {
+    background-image:  url('images/slidetaxi30.jpg');
+        background-size:  100%;
+        background-position:  0 0;
+    background-repeat: no-repeat;
+}
+.art-slidetaxi31 {
+    background-image:  url('images/slidetaxi31.jpg');
+        background-size:  100%;
+        background-position:  0 0;
+    background-repeat: no-repeat;
+}
+.art-slidetaxi32 {
+    background-image:  url('images/slidetaxi32.jpg');
+        background-size:  100%;
+        background-position:  0 0;
+    background-repeat: no-repeat;
+}
+
+
+.art-slidenavigatortaxi3 {
+  display: inline-block;
+  position: absolute;
+  direction: ltr !important;
+  top: 276px;
+  left: 78.67%;
+  z-index: 101;
+  line-height: 0 !important;
+  -webkit-background-origin: border !important;
+  -moz-background-origin: border !important;
+  background-origin: border-box !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+    white-space: nowrap;
+    }
+.art-slidenavigatortaxi3
+{
+background: #C0C0B4;background: linear-gradient(top, rgba(229, 229, 224, 0.6) 0, rgba(155, 155, 135, 0.6) 100%) no-repeat;background: -webkit-linear-gradient(top, rgba(229, 229, 224, 0.6) 0, rgba(155, 155, 135, 0.6) 100%) no-repeat;background: -moz-linear-gradient(top, rgba(229, 229, 224, 0.6) 0, rgba(155, 155, 135, 0.6) 100%) no-repeat;background: -o-linear-gradient(top, rgba(229, 229, 224, 0.6) 0, rgba(155, 155, 135, 0.6) 100%) no-repeat;background: -ms-linear-gradient(top, rgba(229, 229, 224, 0.6) 0, rgba(155, 155, 135, 0.6) 100%) no-repeat;background: linear-gradient(top, rgba(229, 229, 224, 0.6) 0, rgba(155, 155, 135, 0.6) 100%) no-repeat;-svg-background: linear-gradient(top, rgba(229, 229, 224, 0.6) 0, rgba(155, 155, 135, 0.6) 100%) no-repeat;
+-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
+
+
+padding:7px;
+
+
+
+
+
+}
+.art-slidenavigatortaxi3 > a
+{
+background: #7D7D68;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+.art-slidenavigatortaxi3 > a.active
+{
+background: #9DC7E2;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+.art-slidenavigatortaxi3 > a:hover
+{
+background: #3076A1;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+
+</style></head>
+<body>
+<div id="art-main">
+    <div class="art-sheet clearfix">
+<header class="art-header clearfix">
+
+
+    <div class="art-shapes">
+<h1 class="art-headline" data-left="12.97%">
+    <a href="#">MuniGeo</a>
+</h1>
+<h2 class="art-slogan" data-left="18.16%">Ubicación de unidades en tiempo real</h2>
+
+
+
+            </div>
+
+                
+                    
+</header>
+<nav class="art-nav clearfix">
+    <ul class="art-hmenu"><li><a href="inicio.html" class="active">Inicio</a></li><li><a href="entrar.html">Entrar</a></li></ul> 
+    </nav>
+<div class="art-layout-wrapper clearfix">
+                <div class="art-content-layout">
+                    <div class="art-content-layout-row">
+                        <div class="art-layout-cell art-content clearfix"><article class="art-post art-article">
+                                
+                                                
+                <div class="art-postcontent art-postcontent-0 clearfix"><div class="art-content-layout">
+    <div class="art-content-layout-row">
+    <div class="art-layout-cell layout-item-0" style="width: 80%" >
+<div id="efd96ba26a684c9c811d38008cf29c30" style="position: relative; display: inline-block; z-index: 0; margin: 2px;  border-width: 0px;  " class="art-collage">
+<div class="art-slider art-slidecontainerefd96ba26a684c9c811d38008cf29c30" data-width="700" data-height="457">
+    <div class="art-slider-inner">
+<div class="art-slide-item art-slideefd96ba26a684c9c811d38008cf29c300">
+
+</div>
+<div class="art-slide-item art-slideefd96ba26a684c9c811d38008cf29c301">
+
+</div>
+
+    </div>
+</div>
+<div class="art-slidenavigator art-slidenavigatorefd96ba26a684c9c811d38008cf29c30" data-left="93.71">
+<a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a>
+</div>
+
+
+
+    </div>
+
+    </div><div class="art-layout-cell layout-item-1" style="width: 20%" >
+        <p>Con Munigeo los municipios pueden controlar la ubicación de sus Taxis.</p><hr style="border:none;background-color:#dedede;color:#dedede;height:1px;"><p>Con Munigeo la municipalidad puede controlar su Maquinaria que trabaja en Obras.&nbsp;</p><hr style="border:none;background-color:#dedede;color:#dedede;height:1px;"><p>Con Munigeo los vehículos de transporte de personal también podrían ser ubicados en tiempo real.</p><p><br></p><p><br></p>
+    </div>
+    </div>
+</div>
+<div class="art-content-layout">
+    <div class="art-content-layout-row">
+    <div class="art-layout-cell layout-item-2" style="width: 50%" >
+        <h3>Beneficio para los ciudadanos</h3><p style="text-align: justify;">Con MuniGeo el servicio de taxi municipal mejoraría su atención y seguridad. Además, la municipalidad podrá colaborar con aquellas empresas de taxi que deseen incluirse al servicio, no sin antes pasar por una evaluación de cada unidad.<br></p><p></p><div id="taxi3" style="position: relative; display: inline-block; z-index: 0; margin: 7px;  border-width: 0px;  " class="art-collage">
+<div class="art-slider art-slidecontainertaxi3" data-width="300" data-height="300">
+    <div class="art-slider-inner">
+<div class="art-slide-item art-slidetaxi30">
+
+</div>
+<div class="art-slide-item art-slidetaxi31">
+
+</div>
+<div class="art-slide-item art-slidetaxi32">
+
+</div>
+
+    </div>
+</div>
+<div class="art-slidenavigator art-slidenavigatortaxi3" data-left="78.67">
+<a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a>
+</div>
+
+
+
+    </div>
+
+        <p><br></p>
+    </div><div class="art-layout-cell layout-item-3" style="width: 50%" >
+        <h3>Mejor Control</h3><p></p><div id="maquina1" style="position: relative; display: inline-block; z-index: 0; margin: 7px;  border-width: 0px;  " class="art-collage">
+<div class="art-slider art-slidecontainermaquina1" data-width="350" data-height="233">
+    <div class="art-slider-inner">
+<div class="art-slide-item art-slidemaquina10">
+
+</div>
+<div class="art-slide-item art-slidemaquina11">
+
+</div>
+<div class="art-slide-item art-slidemaquina12">
+
+</div>
+<div class="art-slide-item art-slidemaquina13">
+
+</div>
+
+    </div>
+</div>
+<div class="art-slidenavigator art-slidenavigatormaquina1" data-left="76">
+<a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a>
+</div>
+
+
+
+    </div>
+
+        
+        <ul><li style="text-align: justify;">Se pueden controlar tiempos y rutas de las unidades.</li><li style="text-align: justify;">Los mapas ayudan a ubicar rápidamente cualquier unidad.&nbsp;</li><li style="text-align: justify;">En la siguiente versión los ciudadanos podrán pedir desde una aplicación móvil gratuita, el taxi municipal más cercano.</li></ul>
+    </div>
+    </div>
+</div>
+</div>
+                                
+                
+
+</article></div>
+                    </div>
+                </div>
+            </div><footer class="art-footer clearfix">
+<div class="art-content-layout">
+    <div class="art-content-layout-row">
+    <div class="art-layout-cell layout-item-0" style="width: 25%">
+        <p style="font-weight: bold; text-align: left;">Equipo CapuBrothers<br><br></p>
+        <ul>
+        <li style="text-align: left;">Oscar Capuñay Uceda</li>
+        <li style="text-align: left;">Benjamín Capuñay Uceda</li>
+        <li style="text-align: left;">Carlos Capuñay Uceda</li></ul>
+    </div><div class="art-layout-cell layout-item-0" style="width: 25%">
+        <p style="font-weight: bold; text-align: left;"><br></p>
+    </div><div class="art-layout-cell layout-item-0" style="width: 50%">
+        <p style="text-align: right;"><br></p>
+    </div>
+    </div>
+</div>
+
+</footer>
+
+    </div>
+    <p class="art-page-footer">
+        
+    </p>
+</div>
+
+
+</body></html>
